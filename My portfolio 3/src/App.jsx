@@ -1,7 +1,9 @@
-import Header from './components/Header'
-import About from './components/About'
-import Skills from './components/Skills'
-import Footer from './components/Footer'
+import { Routes, Route } from 'react-router-dom'
+import NavBar from './components/NavBar'
+import Home from './pages/Home'
+import Projects from './pages/Projects'
+import Contact from './pages/Contact'
+import NotFound from './pages/NotFound'
 import './App.css'
 
 function App() {
@@ -20,11 +22,14 @@ function App() {
   const contact = 'Email: 24aiml044@charusat.edu.in'
 
   return (
-    <div className="portfolio-app">
-      <Header name={name} themeColor="#0f172a" />
-      <About bio={bio} />
-      <Skills skillList={skillList} />
-      <Footer contact={contact} />
+    <div className="app-shell">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home name={name} bio={bio} skillList={skillList} contact={contact} />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   )
 }

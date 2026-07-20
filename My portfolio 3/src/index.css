@@ -64,6 +64,87 @@ footer {
   color: #cbd5e1;
 }
 
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  background: rgba(124, 92, 255, 0.18);
+}
+
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  color: #e2e8f0;
+}
+
+.project-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 130px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #e2e8f0;
+  padding: 1rem;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  background: linear-gradient(90deg, #7c5cff, #22d3ee);
+  color: #08101a;
+}
+
+.help-box {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.not-found {
+  text-align: center;
+}
+
 /* Header / Nav */
 .site-header .nav {
   display: flex;
